@@ -101,14 +101,12 @@ The original CDC dataset has ~14% diabetes prevalence. For this project, the dat
 
 ✅ The improved model meets the project goal of **≥5% performance gain** on key clinical metrics.
 
+
 ## 🧪 Visual Results
 
-![Distributions components](starter-kit/screeshots/Distributions components.png)
-![Distributions components](starter-kit\screeshots\Distributions components.png)
-![Distributions components](screeshots/Distributions components.png)
-![Distributions components](screeshots\Distributions components.png)
-starter-kit\screeshots\Distributions components.png
-
+![EDA Distributions](starter-kit/screenshots/distributions_components.png)
+![Validation Loss by LR](starter-kit/screenshots/validation_loss_comparison_by_learning_rate.png)
+![Top 3 Loss Curves](starter-kit/screenshots/visualizing_loss_curves_top_3_experiments.png)
 
 
 
