@@ -108,7 +108,6 @@ The original CDC dataset has ~14% diabetes prevalence. For this project, the dat
 ![Validation Loss LR Comparison](screenshots/validation_loss_comparison_by_learning_rate.png)
 ![Top 3 Experiments Loss Curves](screenshots/visualizing_loss_curves_top_3_experiments.png)
 
-![Validation Loss LR Comparison](https://github.com/pepeluseo/Diabetes-risk-deep-learning/blob/main/starter-kit/screenshots/validation_loss_comparison_by_learning_rate.png?raw=true)
 
 ## 🧬 Healthcare Interpretation
 
