@@ -60,6 +60,83 @@ The original CDC dataset has ~14% diabetes prevalence. For this project, the dat
 - **Framework:** PyTorch
 - **Input size:** 21 standardized features
 - **Output:** Binary classification (diabetes risk)
+  
 
 ### Baseline Architecture
-``
+**Design rationale:**
+- ReLU activations enable learning non‑linear feature interactions
+- Gradual reduction in layer size helps regularization
+- Two‑output logits allow use of `CrossEntropyLoss`
+- Lightweight architecture suitable for structured (non‑image) data
+
+
+### Improvements Explored
+- Dropout regularization
+- Learning rate tuning
+- Network architecture simplification
+- Systematic experiment tracking and comparison
+
+## 🔍 Project Workflow
+
+1. Environment setup and reproducibility configuration  
+2. Exploratory Data Analysis (EDA)
+3. Stratified train/validation/test split (60/20/20)
+4. Feature scaling and tensor conversion
+5. Model design and inspection
+6. Training with validation monitoring
+7. Clinical‑oriented evaluation (Recall, F1, ROC‑AUC)
+8. Model improvement and experimentation
+9. Final healthcare interpretation and recommendations
+
+
+## 📈 Key Results (Test Set)
+
+| Metric      | Baseline | Best Model (Dropout) |
+|-------------|----------|----------------------|
+| Accuracy    | 0.71     | 0.75                 |
+| Precision   | 0.70     | 0.73                 |
+| Recall      | 0.76     | **0.78**             |
+| F1‑Score    | 0.73     | **0.75**             |
+| ROC‑AUC     | 0.77     | **0.82**             |
+
+✅ The improved model meets the project goal of **≥5% performance gain** on key clinical metrics.
+
+## 🧪 Visual Results
+
+![Distributions components](starter-kit/screeshots/Distributions components.png)
+
+
+## 🧬 Healthcare Interpretation
+
+- **Recall** is the most important metric for diabetes screening  
+- False negatives are more costly than false positives in medical contexts  
+- The model is suitable as a **decision‑support screening tool**, not as a diagnostic system  
+- Performance is limited by the absence of lab‑based clinical features (e.g., glucose, HbA1c)
+
+
+## 🚀 Technologies Used
+
+- **PyTorch** – Neural network modeling
+- **scikit‑learn** – Preprocessing and evaluation
+- **Pandas & NumPy** – Data manipulation
+- **Matplotlib** – Visualization
+- **Jupyter Notebook** – Experimentation and documentation
+
+## ⚠️ Limitations & Ethics
+
+- Not validated on real‑world prevalence data
+- No clinical lab variables included
+- Potential bias from self‑reported survey data
+- Must not be deployed without medical oversight
+
+
+## 📌 Next Steps
+
+- Threshold tuning for recall‑prioritized screening
+- Early stopping + learning rate scheduling
+- Calibration and evaluation on imbalanced datasets
+- Integration with richer clinical features
+
+
+## 📜 License
+This project is released under the MIT License.
